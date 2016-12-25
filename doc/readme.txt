@@ -1,0 +1,59 @@
+//1. systax: (object,norm,period,action,value[n] )
+//object:nyme,szzs ... ...
+//norm string :boll,macd,kdj,wr,cr, cci,kdj,rsi,dma,ma,roc
+//period:all,year,month,week,day,hour4,hour1,min45,min30,min15,min10,min5,
+//action: setting, parse,all
+//value[n]: value for current norm setting
+ 
+//2.norm
+//systax: (object,norm,period,action,value[n])
+//period:all,year,month,week,day,hour4,hour1,min45,min30,min15,min10,min5,
+ 
+//2.1 boll: ( dir, price, low, mid, upper, buy=-0.1, sell=0.1);
+//boll-setting: (object,boll,period,setting,buy,sell)	
+//boll-parse : (object,boll,period,parse,dir,price,low,mid,upper)	
+ 
+//2.2 macd: (dir, macd, dif, dea, buy=-2.15, sell=2.15, low=-0.06, mid=0, upper=0.06, cross_line=0.5, zero_line=0.3);
+//macd-setting: (object,macd,period,setting,buy,sell,low,mid,upper,cross_line,zero_line)	
+//macd-parse : (object,macd,period,parse,dir,macd,dif,dea)
+ 
+//2.3 kdj: (dir, k, d, j, buy_cross=20, sell_cross=80);
+//kdj-setting: (object,kdj,period,setting,buy_cross,sell_cross)	
+//kdj-parse : (object,kdj,period,parse,dir,k,d,j)
+ 
+//2.4 wr :(dir, wr, wr_long, bottom=3, middle=50, top=97,int negative=IS_NEG);
+//negative:NO_NEG	1 (oil use ) ,IS_NEG	-1(default) (stock use)
+//wr-setting: (object,wr,period,setting,bottom,middle,top,negative)	
+//wr-parse : (object,wr,period,parse,dir,wr,wr_long/1000)//wr_long :is not exist  setting>200 or<-200 .ie 1000
+ 
+//2.5 rsi : ( dir, rsi_short, rsi_middle, rsi_long, bottom=15, top=85);
+//rsi-setting: (object,rsi,period,setting,bottom,top)	
+//rsi-parse : (object,rsi,period,parse,dir,rsi_short,rsi_middle,rsi_long) 
+ 
+//2.6 vr :(dir, vr_short, vr_long, diff=40, bottom=50, middle=100 , top=150);
+//vr-setting: (object,vr,period,setting,diff,bottom,middle,top)	
+//vr-parse : (object,vr,period,parse,dir,vr_short,vr_long)
+ 
+//2.7 roc :(dir, roc, roc_ma, bottom=-3, top=3);
+//roc-setting: (object,roc,period,setting,bottom,top)	
+//roc-parse : (object,roc,period,parse,dir,roc,roc_ma)
+
+//2.8 cr:(dir cr,  a, b, c, diff=30, bottom=50, middle=100, top=150); //oil
+//cr-setting: (object,cr,period,setting,diff,bottom,middle,top)	
+//cr-parse : (object,cr,period,parse,dir,cr,a,b,c)
+
+//2.9	dma:(dir dma, ama, bottom=-4, middle=0, top=4, dir_line=1); //oil
+//dma-setting: (object,dma,period,setting,diff,bottom,middle,top,dir_line)	
+//dma-parse : (object,dma,period,parse,dir,dma,ama)
+
+//2.10 cci: (dir cci, bottom=-400, middle=0, top=400, dir_line=100); //oil
+//cci-setting: (object,cci,period,setting,bottom,middle,top,dir_line)	
+//cci-parse : (object,cci,period,parse,dir,cci)
+
+//2.11 ma: n<9
+//ma-setting: (object,ma,all,setting)	
+//ma-parse : (object,ma,period,parse,dir[0],ma[0],dir[1],ma[1]...dir[n],ma[n],price)
+
+//2.12 vol: (dir_short, vol_short,dir_long, vol_long)
+//vol-setting: (object,vol,all,setting)	
+//vol-parse : (object,vol,period,parse,dir_short,vol_short,dir_long,vol_long)

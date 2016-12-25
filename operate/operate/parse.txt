@@ -1,0 +1,51 @@
+//2.norm
+//systax: (object,norm,period,action,value[n])
+//period:all,year,month,week,day,hour4,hour1,min45,min30,min15,min10,min5,
+ 
+//2.1 boll: ( dir, price, low, mid, upper, buy=-0.1, sell=0.1);
+//boll-parse : (object,boll,period,parse,dir,price,low,mid,upper)	
+(szzs,boll,month,parse,1,3391,1365,3009,4652)	
+(szzs,boll,week,parse,-1,3391,2526,3737,4948)	
+(szzs,boll,day,parse,1,3391,2960,3162,3363)	
+(szzs,boll,hour1,parse,1,3391,3227,3300,3381)	
+  
+//2.2 macd: (dir, macd, dif, dea, buy=-2.15, sell=2.15, low=-0.06, mid=0, upper=0.06, cross_line=0.5, zero_line=0.3);
+//macd-parse : (object,macd,period,parse,dir,macd,dif,dea)
+(szzs,macd,month,parse,-1,-7.8,350,353)
+(szzs,macd,week,parse,1,-110,-158,-103)
+(szzs,macd,day,parse,1,102,9,-42)
+(szzs,macd,hour1,parse,1,11,55,50)
+
+//2.3 kdj: (dir, k, d, j, buy_cross=20, sell_cross=80);
+//kdj-parse : (object,kdj,period,parse,dir,k,d,j)
+(szzs,kdj,month,parse,-1,33,52,0)
+(szzs,kdj,week,parse,1,53,32,87)
+(szzs,kdj,day,parse,1,90,82,100)
+(szzs,kdj,hour1,parse,-1,90,89,92)
+
+//2.4 wr :(dir, wr, wr_long, bottom=3, middle=50, top=97,int negative=IS_NEG);
+//wr-parse : (object,wr,period,parse,dir,wr,wr_long/1000)//wr_long :is not exist  setting>200 or<-200 .ie 1000
+(szzs,wr,month,parse,-1,77,1000)
+(szzs,wr,week,parse,-1,53,1000)
+(szzs,wr,day,parse,1,12,1000)
+(szzs,wr,hour1,parse,1,27,1000)
+
+//2.5 rsi : ( dir, rsi_short, rsi_middle, rsi_long, bottom=15, top=85);
+//rsi-parse : (object,rsi,period,parse,dir,rsi_short,rsi_middle,rsi_long) 
+(szzs,rsi,month,parse,1,49,55,56) 
+(szzs,rsi,week,parse,1,51,45,48) 
+(szzs,rsi,day,parse,-1,77,62,50) 
+(szzs,rsi,hour1,parse,1,80,76,70) 
+
+//2.12 vol: (dir_short, vol_short,dir_long, vol_long)
+(szzs,vol,month,parse,-1,85.6,-1,86.2)
+(szzs,vol,week,parse,-1,8.92.6,-1,12.7)
+(szzs,vol,day,parse,1,3.2,1,2.9)
+(szzs,vol,hour1,parse,-1,6865,-1,7791)
+
+//2.11 ma: n<9
+//ma-parse : (object,ma,period,parse,dir[0],ma[0],dir[1],ma[1]...dir[n],ma[n],price)
+(szzs,ma,month,all,-1,3525,-1,3694,1,3010,1,2710,3425)
+(szzs,ma,week,all,-1,3525,-1,3694,1,3010,1,2710,3425)
+(szzs,ma,day,all,-1,3525,-1,3694,1,3010,1,2710,3425)
+(szzs,ma,hour1,all,-1,3525,-1,3694,1,3010,1,2710,3425)

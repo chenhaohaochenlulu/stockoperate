@@ -1,28 +1,16 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+operate/*.ncb
+operate/*.suo
+operate/Debug/*
+operate/Release/*
+operate/operate/*.user
+operate/operate/Debug/*
+operate/operate/Release/*
 
-# Precompiled Headers
-*.gch
-*.pch
+woperate/*.ncb
+woperate/*.suo
+woperate/Debug/*
+woperate/Release/*
+woperate/woperate/*.user
+woperate/woperate/Debug/*
+woperate/woperate/Release/*
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app

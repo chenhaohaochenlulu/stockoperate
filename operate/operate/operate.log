@@ -1,0 +1,44 @@
+
+hua xia oil_parse:
+
+price.parse:
+15 min  price parse: stop[0]
+30 min  price parse: stop[0]
+60 min  price parse: sell[-2]
+
+trend.parse:
+15 min  trend parse: sell[-3]
+30 min  trend parse: sell[-3]
+60 min  trend parse: sell[-3]
+
+kdj.parse:
+15 min  kdj parse : buy[2]
+30 min  kdj parse : buy[3]
+60 min  kdj parse : buy[6]
+
+rsi.parse:
+15 min  RSI parse : buy[3]
+30 min  RSI parse : buy[6]
+60 min  RSI parse : buy[4]
+
+roc.parse:
+15 min  roc parse : sell[-1]
+30 min  roc parse : buy[2]
+60 min  roc parse : stop[0]
+
+vr.parse:
+30 min  vr parse : buy[1]
+60 min  vr parse : stop[0]
+
+cr.parse:
+30 min  cr parse : stop[0]
+60 min  cr parse : stop[0]
+
+direction:1 stop
+
+total: buy_sell:15
+hour01:5	dir[1]:buy	buy[1] =259.70,buy[2] =261.66,clear:264.79
+min 30:9	dir[1]:buy	buy[1] =260.40,buy[2] =261.48,clear:263.49
+min 15:1	dir[-1]:sell	buy[1] =259.52,clear:261.40
+operate: buy
+refer: min 30:9	dir[1]:buy	buy[1] =260.40,buy[2] =261.48,clear:263.49
